@@ -13,13 +13,13 @@ class Room:
 
     def __str__(self):
         return_string = "**********************"
-        return_string += f"{self.name} you are currently:\n")
-        return_string += f"************ {self.current_location.name} \n\n\n")
-        return_string += '{self.current_location.description} \n"
+        return_string += f"******LOCATION****** {self.name} \n\n\n"
+        return_string += f"{self.description} \n"
         return_string += f"movement options: {get_exits_string()}"
         return return_string
+
     def get_exits_string(self):
-        exits=[]
+        exits = []
         if self.n_to is not None:
             exits.append('n')
         if self.s_to is not None:

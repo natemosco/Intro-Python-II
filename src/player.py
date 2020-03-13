@@ -8,9 +8,9 @@ class Player:
         self.current_location = starting_location
 
     def travel(self, direction):
-        if getattr(self.current_location, f'{direction}_to') is not None:
+        if getattr(self.current_location, f"{direction}_to"):
             self.current_location = getattr(
-                self.current_location, f'{direction}_to')
-            print(self.current_location)
+                self.current_location, f"{direction}_to")
+            print(self.current_location.name)
         else:
             print("You cannot go in this direction")
