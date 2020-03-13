@@ -10,14 +10,12 @@ class Room:
         self.s_to = None
         self.e_to = None
         self.w_to = None
-
     def __str__(self):
-        return_string = "**********************"
-        return_string += f"******LOCATION****** {self.name} \n\n\n"
+        return_string = ""
+        return_string += f"****CURRENT*LOCATION: {self.name} \n"
         return_string += f"{self.description} \n"
-        return_string += f"movement options: {get_exits_string()}"
+        return_string += f"movement options: {self.get_exits_string()}"
         return return_string
-
     def get_exits_string(self):
         exits = []
         if self.n_to is not None:

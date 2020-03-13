@@ -39,7 +39,7 @@ room['treasure'].s_to = room['narrow']
 
 # Make a new player object that is currently in the 'outside' room.
 player = Player(input("Please enter your name:"), room['outside'])
-print(player.current_location.name)
+print(player.current_room)
 # Write a loop that:
 #
 # * Prints the current room name
@@ -56,7 +56,6 @@ print(player.current_location.name)
 # Loop
 valid_moves = ("n", "s", "e", "w")
 while True:
-
     # READ
     cmd = input("\n--> ")
     # EVAL
