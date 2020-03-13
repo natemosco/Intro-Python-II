@@ -49,3 +49,19 @@ player = Player(input("Please enter your name:"), room['outside'])
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
+
+# REPL = Read Eval Print Loop
+
+# Loop
+while True:
+
+    # READ
+    cmd = input("\n--> ")
+    # EVAL
+    if cmd == 'q':
+        print("goodbye (^_^)")
+        exit(0)
+    elif cmd in ("n", "s", "e", "w"):
+        player.travel(cmd)
+    else:
+        print('I did not understand that command')
