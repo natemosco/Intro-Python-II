@@ -11,8 +11,6 @@ class Player:
         if getattr(self.current_location, f'{direction}_to') is not None:
             self.current_location = getattr(
                 self.current_location, f'{direction}_to')
-            print(self.name + " you are currently:")
-            print("************", self.current_location.name, "\n")
-            print(self.current_location.description, "\n")
+            print(self.current_location)
         else:
             print("You cannot go in this direction")
